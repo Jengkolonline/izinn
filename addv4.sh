@@ -36,26 +36,30 @@ add-ip() {
     fi
     read -p "Input Username IP (Example : reyz) : " name
     echo "How Much Days Do You Want ?"
-    echo "1) 30 Days"
-    echo "2) 60 Days"
-    echo "3) 90 Days"
-    echo "4) Lifetime"
-    echo "5) Set Custom Expiration Date"
+    echo "1) 1 Days"
+    echo "2) 30 Days"
+    echo "3) 60 Days"
+    echo "4) 90 Days"
+    echo "5) Lifetime"
+    echo "6) Set Custom Expiration Date"
     read -p "Input Menu Number : " exp
     
     if [[ ${exp} == '1' ]]; then
+    exp2=`date -d "1 days" +"%Y-%m-%d"`
+    echo "### ${name} ${exp2} ${ip}" >> /root/ipvps/ip
+    if [[ ${exp} == '2' ]]; then
     exp2=`date -d "30 days" +"%Y-%m-%d"`
     echo "### ${name} ${exp2} ${ip}" >> /root/ipvps/ip
-    elif [[ ${exp} == '2' ]]; then
+    elif [[ ${exp} == '3' ]]; then
     exp2=`date -d "60 days" +"%Y-%m-%d"`
     echo "### ${name} ${exp2} ${ip}" >> /root/ipvps/ip
-    elif [[ ${exp} == '3' ]]; then
+    elif [[ ${exp} == '4' ]]; then
     exp2=`date -d "90 days" +"%Y-%m-%d"`
     echo "### ${name} ${exp2} ${ip}" >> /root/ipvps/ip
-    elif [[ ${exp} == '4' ]]; then
+    elif [[ ${exp} == '5' ]]; then
     exp2="Lifetime"
     echo "### ${name} ${exp2} ${ip}" >> /root/ipvps/ip
-    elif [[ ${exp} == '5' ]]; then
+    elif [[ ${exp} == '6' ]]; then
     read -p "Input Expired Days : " exp11
     exp2=`date -d "$exp11 days" +"%Y-%m-%d"`
     echo "asu ${name} ${exp2} ${ip} ${versi}" >> /root/ipvps/ip
@@ -174,7 +178,7 @@ echo -e " $PURPLE (01) $NC $Lyellow Add IP VPS$NC"
 echo -e " $PURPLE (02) $NC $Lyellow Delete IP VPS$NC"
 echo -e " $PURPLE (03) $NC $Lyellow Renew IP VPS$NC"
 echo -e ""
-echo -e " $PURPLE Created By $NC $Lyellow @tau_samawa"
+echo -e " $PURPLE Created By $NC $Lyellow @Jengkol_Online"
 echo -e "${Lred} ══════════════════════════════════════════${NC}"
 echo ""
 read -p "Please Input Menu Number : " menu
