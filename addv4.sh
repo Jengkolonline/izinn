@@ -170,9 +170,9 @@ clear
 echo -e "${Lred} ══════════════════════════════════════════${NC}"
 echo -e " ${BGWHITE}         [ REGISTER IP V4 MENU ]          ${NC}"
 echo -e "${Lred} ══════════════════════════════════════════${NC}"
-echo -e " $PURPLE (01) $NC $Lyellow Add IP VPS"$NC     
-echo -e " $PURPLE (02) $NC $Lyellow Delete IP VPS"$NC
-echo -e " $PURPLE (03) $NC $Lyellow Renew IP VPS"$NC
+echo -e " $PURPLE (01) $NC $Lyellow Add IP VPS$NC"     
+echo -e " $PURPLE (02) $NC $Lyellow Delete IP VPS$NC"
+echo -e " $PURPLE (03) $NC $Lyellow Renew IP VPS$NC"
 echo -e ""
 echo -e " $PURPLE Created By $NC $Lyellow @tau_samawa"
 echo -e "${Lred} ══════════════════════════════════════════${NC}"
